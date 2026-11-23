@@ -1,0 +1,98 @@
+{
+  "format_version": 1,
+  "id": "hot-wheels-turbo-racing-psx",
+  "name": "Hot Wheels - Turbo Racing",
+  "kind": "recomp",
+  "platform": "psx",
+  "source_repo": "hot-wheels-turbo-racing-recomp",
+  "rom_identity": {
+    "crc32": [
+      "5b043aae"
+    ],
+    "md5": [
+      "8c3e8ce4c0197ad81300b72bcb8ce5e9"
+    ],
+    "sha1": [
+      "4234fd036d03aa5a84b81e58cd8e3a38fe054aa7"
+    ],
+    "disc_serials": [
+      "SLUS-00964"
+    ],
+    "sizes": [
+      102984672
+    ],
+    "filenames": [
+      "Hot Wheels - Turbo Racing (USA).cue",
+      "Hot Wheels - Turbo Racing (USA) (Track 1).bin"
+    ],
+    "track_counts": [
+      14
+    ],
+    "disc_fps": [
+      "580df0ecb7b7ff88160274eb8d24227fbde8e2dd313b1f67cb66c21169f87373"
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin",
+    ".chd"
+  ],
+  "bios_identity": {
+    "required": true,
+    "name": "SCPH1001.BIN",
+    "profile": "SCPH1001",
+    "crc32": [
+      "37157331"
+    ],
+    "md5": [
+      "924e392ed05558ffdb115408c263dccf"
+    ],
+    "sha1": [
+      "10155d8d6e6e832d6ea66db9bc098321fb5e8ebf"
+    ],
+    "sha256": [
+      "71af94d1e47a68c11e8fdb9f8368040601514a42a5a399cda48c7d3bff1e99d3"
+    ],
+    "sizes": [
+      524288
+    ],
+    "filenames": [
+      "SCPH1001.BIN"
+    ]
+  },
+  "release": {
+    "github": "alexbeavs-ps1-ports/hot-wheels-turbo-racing-recomp",
+    "allow_prerelease": false,
+    "asset_glob": {
+      "windows-x64": "hot-wheels-turbo-racing-*-windows-x64.zip",
+      "linux-x64": "hot-wheels-turbo-racing-*-linux-x64.zip",
+      "macos-arm64": "hot-wheels-turbo-racing-*-macos-arm64.zip",
+      "macos-x64": "hot-wheels-turbo-racing-*-macos-x64.zip"
+    }
+  },
+  "launch": {
+    "windows": "hot_wheels_turbo_racing.exe",
+    "linux": "hot_wheels_turbo_racing",
+    "macos": "hot_wheels_turbo_racing"
+  },
+  "build": {
+    "source": {
+      "github": "alexbeavs-ps1-ports/hot-wheels-turbo-racing-recomp",
+      "ref": ""
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.14"
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

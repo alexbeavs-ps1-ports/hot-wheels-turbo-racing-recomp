@@ -1,0 +1,59 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Hot Wheels - Turbo Racing"
+id = "SLUS-00964"
+players = 1
+exe = "disc/SLUS_009.64"
+disc = "disc/Hot Wheels - Turbo Racing (USA).cue"
+discs = ["disc/Hot Wheels - Turbo Racing (USA).cue"]
+disc_serials = ["SLUS-00964"]
+load_address = "0x80100000"
+entry_pc = "0x80117A60"
+text_size = "0x0001E000"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Hot Wheels - Turbo Racing (USA) (Track 1).bin"
+cue_name = "Hot Wheels - Turbo Racing (USA).cue"
+boot_exe = "SLUS_009.64"
+known_sizes = [102984672]
+known_md5 = [
+  "8c3e8ce4c0197ad81300b72bcb8ce5e9",
+]
+known_sha1 = [
+  "4234fd036d03aa5a84b81e58cd8e3a38fe054aa7",
+]
+known_crc32 = [
+  "5b043aae",
+]
+
+[recompiler]
+bios_config = "psxrecomp/bios/SCPH1001.toml"
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+openbios = false
+bios_hle = false
+window_title = "Hot Wheels - Turbo Racing Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 14
+required_disc_fp = "580df0ecb7b7ff88160274eb8d24227fbde8e2dd313b1f67cb66c21169f87373"

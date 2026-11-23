@@ -1,0 +1,46 @@
+{
+  "format_version": 1,
+  "game": {
+    "name": "Hot Wheels - Turbo Racing",
+    "id": "SLUS-00964",
+    "boot_exe": "SLUS_009.64"
+  },
+  "marketing": {
+    "description": "",
+    "publisher": "",
+    "year": "",
+    "region": "USA",
+    "players": 1
+  },
+  "rom_identity": {
+    "cue_name": "Hot Wheels - Turbo Racing (USA).cue",
+    "bin_name": "Hot Wheels - Turbo Racing (USA) (Track 1).bin",
+    "track_counts": [
+      14
+    ],
+    "require_cue": true,
+    "data_track": {
+      "size": 102984672,
+      "md5": "8c3e8ce4c0197ad81300b72bcb8ce5e9",
+      "sha1": "4234fd036d03aa5a84b81e58cd8e3a38fe054aa7",
+      "crc32": "5b043aae"
+    },
+    "disc_fp": "580df0ecb7b7ff88160274eb8d24227fbde8e2dd313b1f67cb66c21169f87373"
+  },
+  "exe": {
+    "load_address": "0x80100000",
+    "entry_pc": "0x80117A60",
+    "text_size": "0x0001E000",
+    "stack_base": "0x801FFFF0"
+  },
+  "seeds": {
+    "count": 302,
+    "source": "boot_exe_jal"
+  },
+  "warnings": [],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}
